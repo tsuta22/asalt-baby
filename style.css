@@ -6,10 +6,13 @@ body {
   background: #ffffff;
   color: #292929;
   margin: 0;
-  padding: 0 2rem;
+  /* padding: 2rem; */
   font: 16px/1.0
   "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 html {
@@ -18,17 +21,13 @@ html {
 
 
 #battle-faze {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   display: none;
   flex-direction: column;
   gap: 3rem;
   width: 80%;
-  padding-top: 100%;
   margin: 0 auto;
   padding-bottom: 2rem;
+  /* background-color: #8e8e8e; */
 }
 
 #enemy-area {
@@ -111,8 +110,8 @@ a {
 /* 結果のポップアップ */
 #result {
   display: none;
-  position: fixed;
-  top: 20%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 50%;
@@ -133,13 +132,19 @@ a {
 }
 
 
-
+/* トップページ ---------------*/
 #top {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: -2rem;
+  transition: all 1s;
 }
 
 h1 {
   font-weight: 700;
+  font-size: clamp(3rem,6.4vw,3.6rem);
 }
 
 #top div {

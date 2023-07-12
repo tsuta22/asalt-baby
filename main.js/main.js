@@ -75,12 +75,14 @@ attackBtn.addEventListener('click',function(){
 
 
 
+
 // 
 const startBtn = document.getElementById('start-btn');
 const battleFaze = document.getElementById('battle-faze')
 
 startBtn.addEventListener('click',function(){
     document.getElementById('top').style.display = 'none';
+    hpBar.style.backgroundColor = 'aquamarine';
     battleFaze.style.display = 'flex';
 });
 
@@ -91,6 +93,8 @@ const returnTop = document.getElementById('return-top');
 returnTop.addEventListener('click',function(){
     result.style.display = 'none';
     battleFaze.style.display = 'none';
-    resetHP();  
+    // resetHP();  
+    // currentHP = 100;
     document.getElementById('top').style.display = 'block';
+    location.reload();
 });
